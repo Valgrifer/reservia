@@ -1,6 +1,6 @@
 <?php
 
-$envcontents = explode("\r", file_get_contents("./.env"));
+$envcontents = explode("\n", file_get_contents("./.env"));
 
 foreach ($envcontents as $line) if($line)
 {
