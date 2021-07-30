@@ -1,4 +1,122 @@
+@font-face {
+    font-family: raleway;
+    src: url(font/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+
 *, *::before, *::after
 {
     box-sizing: border-box;
+    font-family: raleway, serif;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary: #0065FC;
+    --primary-light: #DEEBFF;
+    --secondary: #F2F2F2;
+}
+
+
+/**
+ * Header
+ */
+
+header {
+    position: relative;
+
+    min-height: 132px;
+}
+
+header .logo {
+    position: absolute;
+
+    top: 24px;
+    left: 20px;
+}
+header .logo * {
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+}
+header nav a {
+    font-weight: bold;
+}
+header nav .register {
+    position: absolute;
+    display: block;
+
+    top: 40px;
+    right: 20px;
+}
+header nav .register a {
+    color: var(--primary);
+}
+header nav ul {
+    position: absolute;
+    display: flex;
+
+    width: 100%;
+
+    bottom: 0;
+
+    margin: 0;
+    padding: 0;
+
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+
+    list-style-type: none;
+}
+header nav li {
+    display: block;
+
+    width: 100%;
+}
+header nav li a {
+    position: relative;
+    display: block;
+
+    width: 100%;
+
+    padding: 21px 0;
+
+    color: black;
+
+    text-align: center;
+}
+header nav li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+
+    background-color: var(--secondary);
+}
+header nav li a.active {
+    color: var(--primary);
+}
+header nav li a.active::after {
+    background-color: var(--primary);
 }
