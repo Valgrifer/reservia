@@ -19,6 +19,7 @@ $nav = [
         <link rel="preload" href="<?= url("font/Raleway-VariableFont_wght.ttf") ?>" as="font" type="font/ttf" crossorigin>
 
         <link rel="stylesheet" type="text/css" media="screen" href="<?= url("style.css") ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("utils.css") ?>" />
     </head>
     <body>
         <header>
