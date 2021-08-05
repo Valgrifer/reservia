@@ -7,6 +7,21 @@ $nav = [
     new nav_items("Activités", "#activites")
 ];
 
+$ville = "Maseille";
+
+$filters = [
+    ["name" => "Économique", "icon" => "dollar"],
+    ["name" => "Familial", "icon" => "little-kid"],
+    ["name" => "Romantique", "icon" => "loving"],
+    ["name" => "Animaux autorisés", "icon" => "protection"],
+];
+
+$popular = [];
+
+$hebergement = [];
+
+$activity = [];
+
 ?><!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -20,6 +35,7 @@ $nav = [
         <link rel="preload" href="<?= url("font/Raleway-ExtraBold.ttf") ?>" as="font" type="font/ttf" crossorigin>
 
         <link rel="stylesheet" type="text/css" media="screen" href="<?= url("style.css") ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("icon.css") ?>" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?= url("utils.css") ?>" />
     </head>
     <body>
@@ -43,11 +59,41 @@ for ($x = 0; $x < sizeof($nav); $x++)
             </nav>
         </header>
         <main>
-
+            <div class="section">
+                <div class="row">
+                    <h2>Trouver votre hébergement pour des vacances de rêve</h2>
+                </div>
+                <div class="row" style="margin-top: 5px">
+                    <p>En plein centre ville ou en plaine nature</p>
+                </div>
+                <div class="row" style="margin-top: 25px">
+                    <form class="input-group">
+                        <label class="secondary icon location" for="search"></label>
+                        <input type="text" class="input-form" name="search" id="search" value="<?= $ville ?>, France">
+                        <input type="submit" class="primary input-form" name="search" value="Recherche">
+                    </form>
+                </div>
+                <div class="row" style="margin-top: 20px">
+                    <h3>Filtres</h3>
+                </div>
+                <div class="row flex-direction-row flex-wrap-wrap" id="filter">
+<?php
+for ($x = 0; $x < sizeof($filters); $x++)
+{
+    ?>                    <div class="pill bold">
+                            <span class="icon <?= $filters[$x]["icon"] ?>"></span><?= $filters[$x]["name"] ?>
+                        </div>
+<?php } ?>
+                </div>
+                <div class="row flex-direction-row" id="filterinfo">
+                    <span class="icon tiny info"></span>
+                    <span style="padding-top: 5px">Plus de 500 logements sont disponibles dans cette ville</span>
+                </div>
+            </div>
         </main>
         <footer class="section secondary">
             <div class="row col-4-md">
-                <h3 class="bold">A propos</h3>
+                <h3>A propos</h3>
                 <ul>
                     <li><a href="#">Fonctionnement du site</a></li>
                     <li><a href="#">Conditions générales de vente</a></li>
@@ -55,14 +101,14 @@ for ($x = 0; $x < sizeof($nav); $x++)
                 </ul>
             </div>
             <div class="row col-4-md">
-                <h3 class="bold">No hébergements</h3>
+                <h3>No hébergements</h3>
                 <ul>
                     <li><a href="#">Charte qualité</a></li>
                     <li><a href="#">Soumettre votre hôtel</a></li>
                 </ul>
             </div>
             <div class="row col-4-md">
-                <h3 class="bold">Assistance</h3>
+                <h3>Assistance</h3>
                 <ul>
                     <li><a href="#">Centre d'aide</a></li>
                     <li><a href="#">Nous contacter</a></li>
