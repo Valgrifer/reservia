@@ -17,6 +17,7 @@ $nav = [
         <title><?= $_ENV["APPNAME"] ?></title>
 
         <link rel="preload" href="<?= url("font/Raleway-VariableFont_wght.ttf") ?>" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="<?= url("font/Raleway-ExtraBold.ttf") ?>" as="font" type="font/ttf" crossorigin>
 
         <link rel="stylesheet" type="text/css" media="screen" href="<?= url("style.css") ?>" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?= url("utils.css") ?>" />
@@ -44,8 +45,29 @@ for ($x = 0; $x < sizeof($nav); $x++)
         <main>
 
         </main>
-        <footer>
-
+        <footer class="section secondary">
+            <div class="row col-4-md">
+                <h3 class="bold">A propos</h3>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="row col-4-md">
+                <h3 class="bold">No hébergements</h3>
+                <ul>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Soumettre votre hôtel</a></li>
+                </ul>
+            </div>
+            <div class="row col-4-md">
+                <h3 class="bold">Assistance</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>

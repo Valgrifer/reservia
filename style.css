@@ -2,6 +2,11 @@
     font-family: raleway;
     src: url(font/Raleway-VariableFont_wght.ttf) format("truetype");
 }
+@font-face {
+    font-family: ralewayBold;
+    src: url(font/Raleway-ExtraBold.ttf) format("truetype");
+    font-weight: bold;
+}
 
 
 *, *::before, *::after
@@ -22,6 +27,41 @@ a {
     --primary: #0065FC;
     --primary-light: #DEEBFF;
     --secondary: #F2F2F2;
+}
+
+.bold {
+    font-family: ralewayBold, serif;
+}
+
+.primary {
+    background-color: var(--primary);
+}
+.primary-light {
+    background-color: var(--primary-light);
+}
+.secondary {
+    background-color: var(--secondary);
+}
+.text-primary {
+    color: var(--primary);
+}
+.text-primary-light {
+    color: var(--primary-light);
+}
+.text-secondary {
+    color: var(--secondary);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: var(--primary);
+    text-decoration: underline var(--primary);
 }
 
 
@@ -98,8 +138,6 @@ header nav li a {
 
     padding: 21px 0;
 
-    color: black;
-
     text-align: center;
 }
 header nav li a::after {
@@ -119,4 +157,22 @@ header nav li a.active {
 }
 header nav li a.active::after {
     background-color: var(--primary);
+}
+/**
+ * Footer
+ */
+
+footer {
+    padding: 20px 30px;
+}
+footer .row {
+    margin: 25px 0;
+}
+footer ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+footer ul li {
+    margin: 10px 0 0 0;
 }
