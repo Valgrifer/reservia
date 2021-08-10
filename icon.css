@@ -12,6 +12,12 @@
 
     background-size: 50%;
 }
+.icon.font {
+    width: 1em;
+    height: 1em;
+
+    background-size: 100%;
+}
 
 .icon.location {
     background-image: url(images/icon/pin.svg);
@@ -35,4 +41,8 @@
 
 .icon.protection {
     background-image: url(images/icon/protection.svg);
+}
+
+.icon.stats {
+    background-image: url(images/icon/stats.svg);
 }

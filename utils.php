@@ -59,3 +59,51 @@ class nav_items
         return $this->slug;
     }
 }
+
+class Card
+{
+    private $title;
+    private $img;
+    private $price;
+    private $score;
+
+    public function __construct($title, $img, $price = 0, $score = 0)
+    {
+        $this->title = $title;
+        $this->img = $img;
+        $this->price = $price;
+        $this->score = $score;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+}
