@@ -12,10 +12,10 @@ $imgsize = "3_medium";
 $ville = "Maseille";
 
 $filters = [
-    ["name" => "Économique", "icon" => "dollar"],
-    ["name" => "Familial", "icon" => "little-kid"],
-    ["name" => "Romantique", "icon" => "loving"],
-    ["name" => "Animaux autorisés", "icon" => "protection"],
+    ["name" => "Économique", "icon" => "money-bill-wave"],
+    ["name" => "Familial", "icon" => "child"],
+    ["name" => "Romantique", "icon" => "heart"],
+    ["name" => "Animaux autorisés", "icon" => "dog"],
 ];
 
 $populars = [
@@ -88,7 +88,7 @@ for ($x = 0; $x < sizeof($nav); $x++)
                 </div>
                 <div class="row" style="margin-top: 25px">
                     <form class="input-group">
-                        <label class="secondary icon location" for="search"></label>
+                        <label class="secondary icon map-marker-alt" for="search"></label>
                         <input type="text" class="input-form" name="search" id="search" value="<?= $ville ?>, France">
                         <input type="submit" class="primary input-form" name="search" value="Recherche">
                     </form>
@@ -114,7 +114,7 @@ foreach ($filters as $filter)
                 <div id="popular" class="col-12 secondary">
                     <div class="row flex-direction-row justify-content-space-between">
                         <h3>Les plus populaires</h3>
-                        <h2 class="icon font stats"></h2>
+                        <h2 class="icon font chart-line"></h2>
                     </div>
                     <div class="row flew-wrap-wrap">
 <?php

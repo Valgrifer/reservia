@@ -184,8 +184,8 @@ header nav li a.active::after {
 
     padding: 10px 16px !important;
 
-    background-image: url(images/icon/search.svg);
-    background-size: 22px;
+    background-image: url(images/icon/search-solid.svg);
+    background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -301,13 +301,15 @@ header nav li a.active::after {
 .star {
     display: inline-block;
     width: 12px;
-    height: 12px;
+    height: 15px;
     margin-right: -3px;
-    background-image: url(images/icon/star.svg);
-    background-size: 12px;
+    background-image: url(images/icon/star-solid.svg);
+    background-size: 12px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .star.fill {
-    background-image: url(images/icon/starfill.svg);
+    background-image: url(images/icon/star-fill-solid.svg);
 }
 .star:last-child {
     margin-right: 0;

@@ -10,7 +10,7 @@
     width: 25px;
     height: 25px;
 
-    background-size: 50%;
+    background-size: 20%;
 }
 .icon.font {
     width: 1em;
@@ -19,30 +19,33 @@
     background-size: 100%;
 }
 
-.icon.location {
-    background-image: url(images/icon/pin.svg);
+.icon.map-marker-alt {
+    background-image: url(images/icon/map-marker-alt-solid.svg);
+    background-size: 27%;
 }
 
 .icon.info {
-    background-image: url(images/icon/info.svg);
+    background-image: url(images/icon/info-solid.svg);
 }
 
-.icon.dollar {
-    background-image: url(images/icon/dollar.svg);
+.icon.money-bill-wave {
+    background-image: url(images/icon/money-bill-wave-solid.svg);
+    background-size: 40%;
 }
 
-.icon.little-kid {
-    background-image: url(images/icon/little-kid.svg);
+.icon.child {
+    background-image: url(images/icon/child-solid.svg);
 }
 
-.icon.loving {
-    background-image: url(images/icon/loving.svg);
+.icon.heart {
+    background-image: url(images/icon/heart-solid.svg);
 }
 
-.icon.protection {
-    background-image: url(images/icon/protection.svg);
+.icon.dog {
+    background-image: url(images/icon/dog-solid.svg);
+    background-size: 45%;
 }
 
-.icon.stats {
-    background-image: url(images/icon/stats.svg);
+.icon.chart-line {
+    background-image: url(images/icon/chart-line-solid.svg);
 }
