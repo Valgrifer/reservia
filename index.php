@@ -34,10 +34,10 @@ $hebergements = [
 ];
 
 $activitys = [
-    new Card("Vieux Port", "reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"),
+    new Card("Vieux Port", "reno-laithienne-QUgJhdY5Fyk-unsplash.jpg", 0, 0, ["height" => "100%"]),
     new Card("Fort de Pomègues", "paul-hermann-QFTrLdQIRhI-unsplash.jpg"),
     new Card("Îles du Frioul", "kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"),
-    new Card("Parc National des Calanques", "kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"),
+    new Card("Parc National des Calanques", "kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg", 0, 0, ["height" => "100%"]),
     new Card("Notre-Dame-de-la-Garde", "florian-wehde-xW9e8gdotxI-unsplash.jpg"),
     new Card("Parc Longchamp", "lena-paulin-wH2-EJoDcV0-unsplash.jpg"),
 ];
@@ -70,7 +70,7 @@ $activitys = [
 <?php
 for ($x = 0; $x < sizeof($nav); $x++)
 {
-    ?>                    <li><a href="<?= url($nav[$x]->getSlug()) ?>"<?= $x === 0 ? " class=\"active\"" : "" ?>><?= $nav[$x]->getName() ?></a></li>
+    ?>                    <li<?= $x === 0 ? " class=\"active\"" : "" ?>><a href="<?= url($nav[$x]->getSlug()) ?>"><?= $nav[$x]->getName() ?></a></li>
 <?php } ?>
                 </ul>
                 <span class="register">
@@ -93,25 +93,27 @@ for ($x = 0; $x < sizeof($nav); $x++)
                         <input type="submit" class="primary input-form" name="search" value="Recherche">
                     </form>
                 </div>
-                <div class="row" style="margin-top: 20px">
-                    <h3>Filtres</h3>
-                </div>
-                <div class="row flex-direction-row flex-wrap-wrap" id="filter">
-<?php
-foreach ($filters as $filter)
-{
-?>                    <div class="pill bold">
+                <div class="row no-gap flex-direction-row-mb align-items-center-mb">
+                    <div class="row col-1-mb" style="margin-top: 20px">
+                        <h3>Filtres</h3>
+                    </div>
+                    <div class="row col-10-mb flex-direction-row flex-wrap-wrap" id="filter">
+                        <?php
+                        foreach ($filters as $filter)
+                        {
+                            ?>                    <div class="pill bold">
                             <span class="icon <?= $filter["icon"] ?>"></span><?= $filter["name"] ?>
                         </div>
-<?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
                 <div class="row flex-direction-row" id="filterinfo">
                     <span class="icon tiny info"></span>
                     <span style="padding-top: 5px">Plus de 500 logements sont disponibles dans cette ville</span>
                 </div>
             </div>
-            <section id="hebergements">
-                <div id="popular" class="col-12 secondary">
+            <section id="hebergements" class="flex-direction-row-mb">
+                <div id="popular" class="col-12 secondary col-4-mb order-1-mb rounded-mb no-gap">
                     <div class="row flex-direction-row justify-content-space-between">
                         <h3>Les plus populaires</h3>
                         <h2 class="icon font chart-line"></h2>
@@ -121,7 +123,7 @@ foreach ($filters as $filter)
 foreach ($populars as $popolar)
 {
 ?>
-                        <div class="card flex-direction-row">
+                        <div class="card flex-direction-row no-max-width">
                             <img class="card-img" src="<?= url("images/hebergements/$imgsize/{$popolar->getImg()}")?>" alt="<?= $popolar->getTitle() ?>">
                             <div class="card-content">
                                 <h4 class="card-title"><?= $popolar->getTitle() ?></h4>
@@ -141,9 +143,9 @@ foreach ($populars as $popolar)
 ?>
                     </div>
                 </div>
-                <div id="result" class="col-12 secondary-mb">
+                <div id="result" class="col-12 secondary-mb order-0-mb rounded-mb" style="flex-shrink: unset">
                     <div class="row"><h3>Hébergements à <?= $ville ?></h3></div>
-                    <div class="row flew-wrap-wrap">
+                    <div class="row flex-wrap-wrap align-content-space-between-mb justify-content-space-between-mb flex-direction-row-mb">
 <?php
 foreach ($hebergements as $hebergement)
 {
@@ -173,14 +175,17 @@ for ($x = 0; $x < 5; $x++)
                 </div>
             </section>
             <section id="activites">
-                <div id="result" class="col-12 secondary-mb">
+                <div class="col-12">
                     <div class="row"><h3>Activités à <?= $ville ?></h3></div>
-                    <div class="row flew-wrap-wrap">
+                    <div class="content row flex-wrap-wrap align-content-stretch-mb align-items-stretch-mb justify-content-space-around-mb">
 <?php
 foreach ($activitys as $activity)
 {
+    $style = "";
+    foreach ($activity->getStyles() as $k => $v)
+        $style .= "$k: $v;";
 ?>
-                            <div class="card full-size">
+                            <div class="card full-size"<?= !empty($style) ? " style=\"$style\"" : "" ?>>
                                 <img class="card-img" src="<?= url("images/activites/$imgsize/{$activity->getImg()}")?>" alt="<?= $activity->getTitle() ?>">
                                 <h4 class="card-content card-title"><?= $activity->getTitle() ?></h4>
                             </div>
@@ -191,8 +196,8 @@ foreach ($activitys as $activity)
                 </div>
             </section>
         </main>
-        <footer class="section secondary">
-            <div class="row col-4-md">
+        <footer class="section secondary flex-direction-row-mb">
+            <div class="row col-4-md no-gap">
                 <h3>A propos</h3>
                 <ul>
                     <li><a href="#">Fonctionnement du site</a></li>
@@ -200,14 +205,14 @@ foreach ($activitys as $activity)
                     <li><a href="#">Données et confidentialité</a></li>
                 </ul>
             </div>
-            <div class="row col-4-md">
+            <div class="row col-4-md no-gap">
                 <h3>No hébergements</h3>
                 <ul>
                     <li><a href="#">Charte qualité</a></li>
                     <li><a href="#">Soumettre votre hôtel</a></li>
                 </ul>
             </div>
-            <div class="row col-4-md">
+            <div class="row col-4-md no-gap">
                 <h3>Assistance</h3>
                 <ul>
                     <li><a href="#">Centre d'aide</a></li>

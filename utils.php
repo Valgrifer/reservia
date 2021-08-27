@@ -62,48 +62,58 @@ class nav_items
 
 class Card
 {
-    private $title;
-    private $img;
-    private $price;
-    private $score;
+    private string $title;
+    private string $img;
+    private int $price;
+    private int $score;
+    private array $style;
 
-    public function __construct($title, $img, $price = 0, $score = 0)
+    public function __construct(string $title, string $img, int $price = 0, int $score = 0, array $style = [])
     {
         $this->title = $title;
         $this->img = $img;
         $this->price = $price;
         $this->score = $score;
+        $this->style = $style;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getImg()
+    public function getImg(): string
     {
         return $this->img;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getPrice()
+    public function getPrice(): int
     {
         return $this->price;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getScore()
+    public function getScore(): int
     {
         return $this->score;
+    }
+
+    /**
+     * @return array
+     */
+    public function getStyles(): array
+    {
+        return $this->style;
     }
 }
