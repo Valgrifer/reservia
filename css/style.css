@@ -1,10 +1,10 @@
 @font-face {
     font-family: raleway;
-    src: url(font/Raleway-VariableFont_wght.ttf) format("truetype");
+    src: url(../font/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
     font-family: ralewayBold;
-    src: url(font/Raleway-ExtraBold.ttf) format("truetype");
+    src: url(../font/Raleway-ExtraBold.ttf) format("truetype");
     font-weight: bold;
 }
 
@@ -191,7 +191,7 @@ header nav li.active::after {
 
     padding: 10px 16px !important;
 
-    background-image: url(images/icon/search-solid.svg);
+    background-image: url(../images/icon/search-solid.svg);
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
@@ -311,13 +311,13 @@ header nav li.active::after {
     width: 12px;
     height: 15px;
     margin-right: -3px;
-    background-image: url(images/icon/star-solid.svg);
+    background-image: url(../images/icon/star-solid.svg);
     background-size: 12px 15px;
     background-position: center;
     background-repeat: no-repeat;
 }
 .star.fill {
-    background-image: url(images/icon/star-fill-solid.svg);
+    background-image: url(../images/icon/star-fill-solid.svg);
 }
 .star:last-child {
     margin-right: 0;

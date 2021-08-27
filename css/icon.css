@@ -20,32 +20,32 @@
 }
 
 .icon.map-marker-alt {
-    background-image: url(images/icon/map-marker-alt-solid.svg);
+    background-image: url(../images/icon/map-marker-alt-solid.svg);
     background-size: 27%;
 }
 
 .icon.info {
-    background-image: url(images/icon/info-solid.svg);
+    background-image: url(../images/icon/info-solid.svg);
 }
 
 .icon.money-bill-wave {
-    background-image: url(images/icon/money-bill-wave-solid.svg);
+    background-image: url(../images/icon/money-bill-wave-solid.svg);
     background-size: 40%;
 }
 
 .icon.child {
-    background-image: url(images/icon/child-solid.svg);
+    background-image: url(../images/icon/child-solid.svg);
 }
 
 .icon.heart {
-    background-image: url(images/icon/heart-solid.svg);
+    background-image: url(../images/icon/heart-solid.svg);
 }
 
 .icon.dog {
-    background-image: url(images/icon/dog-solid.svg);
+    background-image: url(../images/icon/dog-solid.svg);
     background-size: 45%;
 }
 
 .icon.chart-line {
-    background-image: url(images/icon/chart-line-solid.svg);
+    background-image: url(../images/icon/chart-line-solid.svg);
 }

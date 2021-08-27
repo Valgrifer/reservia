@@ -54,9 +54,9 @@ $activitys = [
         <link rel="preload" href="<?= url("font/Raleway-VariableFont_wght.ttf") ?>" as="font" type="font/ttf" crossorigin>
         <link rel="preload" href="<?= url("font/Raleway-ExtraBold.ttf") ?>" as="font" type="font/ttf" crossorigin>
 
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("style.css") ?>" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("icon.css") ?>" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("utils.css") ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("css/style.css") ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("css/icon.css") ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?= url("css/utils.css") ?>" />
     </head>
     <body>
         <header>
