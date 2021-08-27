@@ -579,8 +579,8 @@ footer ul li {
      */
 
     main {
-        padding: 0 30px;
-        margin-top: -20px;
+        max-width: 1860px;
+        margin: -20px auto 0 auto;
     }
 
 
