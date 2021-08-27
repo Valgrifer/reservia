@@ -145,7 +145,7 @@ foreach ($populars as $popolar)
                 </div>
                 <div id="result" class="col-12 secondary-mb order-0-mb rounded-mb" style="flex-shrink: unset">
                     <div class="row"><h3>Hébergements à <?= $ville ?></h3></div>
-                    <div class="row flex-wrap-wrap align-content-space-between-mb justify-content-space-between-mb flex-direction-row-mb">
+                    <div class="row flex-wrap-wrap flex-direction-row-mb" style="gap: 30px">
 <?php
 foreach ($hebergements as $hebergement)
 {
